@@ -188,20 +188,60 @@
 
       const supabaseClient = createClient(supabaseUrl, supabaseKey);
 
-      // --- Tile doctor groups (3 per tile as requested)
-      const tileDoctors = [
-        ["DR. SANJIV CHOUDHARY", "DR. ANKITA SRIVASTAVA", "DR. JANANI P"],
-        ["DR. GITESH SAWATKAR", "DR. PRIYANKA ARKE", "DR. RITU KUREE"],
-        ["DR. SNEHAL CHOPADE", "DR. POOJA RATHI", "DR. AKARSH AGRAWAGAL" /* handled below - fix name*/],
-        ["DR. NITIN LADE", "DR. NAVYA PEDAPALLI", "DR. ANANYA ARYA"],
-        ["DR. JAYANT TANDI", "DR. MADHUMITHA RS", "DR. ABHIJEET BRIZWASI"],
-        ["DR. CHETHAN CM", "DR. GOBINDA MURMU", "DR. NIMRAT KAUR"],
-        ["DR. SUHANI JAISWAL", "DR. NEEHARIKA VERMA", "DR. HIBA PK"]
-      ];
+// --- Tile doctor groups (Updated - 23 Doctors)
+const tileDoctors = [
 
-      // NOTE: There was a tiny mismatch: earlier user list had DR. AKARSH AGRAWAL (not AKARSH AGRAWAGAL).
-      // Fix that here:
-      tileDoctors[2][2] = "DR. AKARSH AGRAWAL";
+  // Tile 1 (4)
+  [
+    "DR. SANJIV CHOUDHARY",
+    "DR. ANKITA SRIVASTAVA",
+    "DR. JANANI P",
+    "DR. SUGAT JAWADE"
+  ],
+
+  // Tile 2 (3)
+  [
+    "DR. GITESH SAWATKAR",
+    "DR. PRIYANKA ARKE",
+    "DR. ANANYA ARYA"
+  ],
+
+  // Tile 3 (3)
+  [
+    "DR. NITIN LADE",
+    "DR. MADHUMITHA RS",
+    "DR. GOBINDA MURMU"
+  ],
+
+  // Tile 4 (3)
+  [
+    "DR. JAYANT TANDI",
+    "DR. ABHIJEET BRIZWASI",
+    "DR. CHETHAN CM"
+  ],
+
+  // Tile 5 (3)
+  [
+    "DR. NIMRAT KAUR",
+    "DR. SUHANI JAISWAL",
+    "DR. SAMRIDHI KRISHNA"
+  ],
+
+  // Tile 6 (3)
+  [
+    "DR. HIBA PK",
+    "DR. NEEHARIKA VERMA",
+    "DR. ARUN SOMSUNDARAM"
+  ],
+
+  // Tile 7 (4)
+  [
+    "DR. VIDUSHI AGRAWAL",
+    "DR. JANHVI CHAFLE",
+    "DR. ANASWARA PREM",
+    "DR. VIVEK SALAME"
+  ]
+];
 
       // Flatten the doctor list for batch query
       const allDoctors = tileDoctors.flat();
